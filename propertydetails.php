@@ -587,3 +587,287 @@ return false;
 <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=170855319634692&autoLogAppEvents=1"></script>
 
 <?php get_footer(); ?>
+
+<style>
+.jre-propertytemplate-wrap{
+	position: relative;
+	top: 150px;
+	padding-bottom:150px;
+    display: grid;
+  	grid-template-columns: 25% 25% 25% 25%;
+  	grid-template-rows: auto;
+  	grid-template-areas: 
+    "overviewbar overviewbar overviewbar overviewbar"
+    "leftcolumn leftcolumn leftcolumn rightcolumn";
+}
+
+.jre-propertytemplate-overviewbar{
+	grid-area: overviewbar;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: #ccc 1px solid;
+}
+
+.jre-propertytemplate-left-column{
+	grid-area: leftcolumn;
+	margin-right:30px;
+	margin-bottom:100px;
+}
+
+.jre-propertytemplate-right-column{
+	grid-area: rightcolumn;
+}
+
+.jre-propertytemplate-overviewbar-entry{
+	display: inline-block;
+    text-align: center;
+    width: 15%;
+    vertical-align:top;
+}
+
+.jre-propertytemplate-overviewbar-inner-wrapper{
+	text-align:center;
+}
+
+.jre-propertytemplate-overviewbar-inner-wrapper .fa{
+    font-size: 35px;
+}
+
+.jre-propertytemplate-overviewbar-entry-title p, .jre-propertytemplate-belowimages-content-details-bold{
+	font-weight:bold;
+}
+
+.jre-propertytemplate-belowimages-content-details-wrapper{
+	position: relative;
+    display: grid;
+  	grid-template-columns: 25% 25% 25% 25%;
+  	grid-template-rows: auto;
+  	grid-template-areas: 
+    "detailscol1 detailscol2 detailscol3 detailscol4";
+}
+
+.jre-propertytemplate-belowimages-content-details-title{
+	grid-area: detailstitle;
+}
+
+.jre-propertytemplate-belowimages-content-details-col1{
+	grid-area: detailscol1;
+}
+
+.jre-propertytemplate-belowimages-content-details-col2{
+	grid-area: detailscol2;
+}
+
+.jre-propertytemplate-belowimages-content-details-col3{
+	grid-area: detailscol3;
+}
+
+.jre-propertytemplate-belowimages-content-details-col4{
+	grid-area: detailscol4;
+}
+
+.jre-propertytemplate-belowimages-controls-container{
+	margin-top: 30px;
+}
+
+.jre-propertytemplate-belowimages-content-details-2col-wrapper{
+	position: relative;
+    display: grid;
+  	grid-template-columns: 25% 75%;
+  	grid-template-rows: auto;
+  	grid-template-areas: 
+    "detailscol1 detailscol2";
+}
+
+.jre-propertytemplate-belowimages-content-details-title{
+	grid-area: detailstitle;
+}
+
+.jre-propertytemplate-belowimages-content-details-2col-col1{
+	grid-area: detailscol1;
+}
+
+.jre-propertytemplate-belowimages-content-details--2col-col2{
+	grid-area: detailscol2;
+}
+
+
+#jre-propertytemplate-overviewbar-entry-content-pricetext{
+	background-color: #71a300;
+    color: white;
+    width: 100px;
+    display: inline-block;
+}
+
+#jre-propertytemplate-overviewbar-entry-content-pricetext p{
+	color:white;
+}
+
+#jre-propertytemplate-overviewbar-entry-content-price p{
+	font-size:1.5em;
+}
+
+#jre-propertytemplate-overviewbar-entry-content-price{
+	margin-top:8px;
+}
+
+.jre-propertytemplate-belowimages-controls-title p{
+    color: #669900;
+    font-size: 1.5em;
+    line-height: 32px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-transform: none;
+    font-family: 'Playfair Display', sans-serif;
+    border: solid 1px #669900;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0px;
+    margin-bottom: 5px;
+}
+
+.jre-propertytemplate-belowimages-content-details-col1 p:after {
+  border-bottom: 1px dotted black;
+  content: '';
+  flex: 1;
+}
+
+#jre-propertytemplate-right-column-mortgage-div a{
+    display: block;
+    padding: 30px;
+    color: white;
+    font-size: 1.5em;
+}
+
+#jre-propertytemplate-right-column-mortgage-div{
+	text-align: center;
+    background-color: #477000;
+    margin-bottom:50px;
+}
+
+#jre-propertytemplate-right-column-mortgage-div p a{
+	color:white;
+	padding: 40px;
+    background-color: #477000;
+}
+
+.jre-propertytemplate-right-column-agent-details .wpcf7 input[type="submit"]{
+	background-color: #477000;
+}
+
+#jre-propertytemplate-right-column-agent-details-title, #jre-propertytemplate-right-column-contact-us{
+	color: #71a300;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', sans-serif;
+    border: solid 1px black;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-color: #71a300;
+}
+
+#jre-propertytemplate-right-column-agent-details-name{
+    font-weight: bold;
+    color: #71a300;
+    font-size: 1.2em;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+#jre-propertytemplate-right-column-contact-us{
+	margin-top:40px;
+}
+
+#jre-propertytemplate-right-column-agent-details-phone, #jre-propertytemplate-right-column-agent-details-email{
+    font-weight: bold;
+    color: #71a300;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.jre-propertytemplate-right-column-agent-details .wpcf7{
+	background-color: #eee;
+    padding: 10px;
+    position: relative;
+    border: solid 1px #ddd;
+    margin-bottom:40px;
+}
+
+@media screen and ( max-width: 1000px ){
+	.jre-propertytemplate-wrap{
+		display:block;
+	}
+}
+
+@media screen and ( max-width: 800px ){
+
+	.qode_image_gallery_no_space.highlight_active ul li{
+		margin-bottom: 20px;
+	}
+
+	#jre-propertytemplate-gallery .vc_row-fluid{
+		text-align: center;
+    	margin-left: auto;
+    	width: 100%;
+	}
+
+	.jre-propertytemplate-belowimages-controls-title p, #jre-propertytemplate-right-column-agent-details-title, #jre-propertytemplate-right-column-contact-us{
+		text-align:center;
+	}
+
+	.jre-propertytemplate-wrap{
+		top:0;
+	}
+
+	.jre-propertytemplate-belowimages-content-details-wrapper{
+		position: relative;
+	    display: grid;
+	  	grid-template-columns: 50% 50%;
+	  	grid-template-rows: auto;
+	  	grid-template-areas: 
+	    "detailstitle detailstitle"
+    	"detailscol1 detailscol2"
+    	"detailscol3 detailscol4";
+	}
+
+	.jre-propertytemplate-belowimages-content-details-2col-wrapper{
+		position: relative;
+	    display: grid;
+	  	grid-template-columns: 50% 50%;
+	  	grid-template-rows: auto;
+	  	grid-template-areas: 
+	    "detailscol1 detailscol2";
+	}
+
+	.jre-propertytemplate-overviewbar-entry{
+		display:block;
+	}
+
+	.jre-propertytemplate-overviewbar-entry{
+	    width: 100%;
+	    margin-bottom:20px;
+	    margin-top:20px;
+	}
+
+	.jre-propertytemplate-belowimages-content-details-title{
+		grid-area: detailstitle;
+	}
+
+	.jre-propertytemplate-belowimages-content-details-col1{
+		grid-area: detailscol1;
+	}
+
+	.jre-propertytemplate-belowimages-content-details-col2{
+		grid-area: detailscol2;
+	}
+
+	.jre-propertytemplate-belowimages-content-details-col3{
+		grid-area: detailscol3;
+	}
+
+	.jre-propertytemplate-belowimages-content-details-col4{
+		grid-area: detailscol4;
+	}
+}	
+</style>
